@@ -1,0 +1,11 @@
+body {
+    background-color: #FFC907;
+    color: #003366;
+}
+.card {
+    padding-top: 20px; 
+    width: auto; /* Adjust as needed */
+}
+body, .card, .donate-btn, .header-action-btn, .image-container, ul, li, h1, h2, h3, p, a {
+    font-family: Georgia;
+}
