@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang = "en">
+    
+<head>
+     <title> Charity Water Landing Page</title>
+     <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+     <div class="card">
+         <h1>Not All Heroes Wear Capes - They Build Futures</h1>
+         <h2>Real Change Starts with you</h2>
+         <p>Fund Real Projects and Join Charity: Water and fight for clean water and environmental justice—one community at a time.</p>
+         <p>At Charity: Water, our mission is simple but powerful: bring clean and safe drinking water to people in need. We fund sustainable, 
+            community-led water projects around the world—and 100% of public donations go directly to the field. With real stories, transparent 
+            impact reporting, and a hopeful, action-driven approach, we empower a new generation of changemakers to make a measurable difference.</p>
+         <h3></h3>
+         <ul>
+            <li><a href = "https://www.charitywater.org/">Donate</a></li>
+         </ul>
+        </div>
+      
+     <div class="image-container" style="position: absolute; top: 0px; left: 0px;">
+    <img src="logo.png" alt="Charity Water Logo" style="width: 160px; height: 80px;">
+</div>
+
+        <script>
+            // Optional: Add JS for button if needed
+        </script>
+        <style>
+            .donate-btn {
+                background-color: #00bfae;
+                color: #fff;
+                border: none;
+                padding: 12px 28px;
+                border-radius: 5px;
+                font-size: 1rem;
+                cursor: pointer;
+                text-decoration: none;
+                display: inline-block;
+                transition: background 0.2s;
+            }
+            .donate-btn:hover {
+                background-color: #009e8e;
+            }
+        </style>
+        <script>
+            // Replace the Donate link with a button
+            document.addEventListener('DOMContentLoaded', function() {
+                const donateLink = document.querySelector('ul li a[href="https://www.charitywater.org/"]');
+                if (donateLink) {
+                    const btn = document.createElement('a');
+                    btn.href = donateLink.href;
+                    btn.textContent = 'Donate';
+                    btn.className = 'donate-btn';
+                    btn.setAttribute('role', 'button');
+                    donateLink.parentNode.replaceChild(btn, donateLink);
+                }
+            });
+        </script>
+        <style>
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+            }
+            ul li {
+                display: inline-block;
+            }
+</html>
+<style>
+    body, .card, .card * {
+        text-align: center !important;
+    }
+    .donate-btn {
+        background-color: #77A8BB !important;
+        color: #003366 !important;
+    }
+</style>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+    .card {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .card h1, .card h2, .card h3, .card p, .card ul {
+        text-align: center;
+    }
+    .image-container {
+        text-align: center;
+    }
+</style>
+
+</style>
+<script>
+    // Add a water droplet emoji to the Donate button
+    document.addEventListener('DOMContentLoaded', function() {
+        const donateBtn = document.querySelector('.donate-btn');
+        if (donateBtn && !donateBtn.textContent.includes('💧')) {
+            donateBtn.innerHTML = donateBtn.textContent + ' 💧';
+        }
+    });
+    const logoContainer = document.querySelector('.image-container[style*="position: absolute"]');
+    if (logoContainer) {
+        logoContainer.style.background = 'white';
+        logoContainer.style.width = '100vw';
+        logoContainer.style.height = '90px';
+        logoContainer.style.display = 'flex';
+        logoContainer.style.alignItems = 'center';
+        logoContainer.style.justifyContent = 'flex-start';
+        logoContainer.style.boxShadow = '0 2px 8px rgba(0,0,0,0.04)';
+        logoContainer.style.borderBottomRightRadius = '16px';
+        logoContainer.style.borderBottomLeftRadius = '16px';
+        logoContainer.style.left = '0';
+        logoContainer.style.right = '0';
+        logoContainer.style.top = '0';
+        logoContainer.style.position = 'fixed';
+        logoContainer.style.zIndex = '1000';
+        // Add padding to the logo image for spacing
+        const logoImg = logoContainer.querySelector('img');
+        if (logoImg) {
+            logoImg.style.marginLeft = '32px';
+            logoImg.style.verticalAlign = 'middle';
+        }
+        // Create action buttons
+        const actions = [
+            {
+                text: 'Take Action',
+                href: 'https://www.charitywater.org/donate/the-spring'
+            },
+            {
+                text: 'About Us',
+                href: 'https://www.charitywater.org/about'
+            },
+            {
+                text: 'Why Water?',
+                href: 'https://www.charitywater.org/global-water-crisis'
+            }
+        ];
+        const btnContainer = document.createElement('div');
+        btnContainer.style.display = 'flex';
+        btnContainer.style.gap = '16px';
+        btnContainer.style.marginLeft = '32px';
+        actions.forEach(action => {
+            const btn = document.createElement('a');
+            btn.href = action.href;
+            btn.textContent = action.text;
+            btn.className = 'header-action-btn';
+            btn.style.background = '#77A8BB'; // Match donate button background
+            btn.style.color = '#003366';      // Match donate button text color
+            btn.style.padding = '10px 22px';
+            btn.style.borderRadius = '5px';
+            btn.style.textDecoration = 'none';
+            btn.style.fontWeight = 'bold';
+            btn.style.fontSize = '1rem';
+            btn.style.transition = 'background 0.2s';
+            btn.style.display = 'inline-block';
+            btn.style.boxShadow = '0 1px 4px rgba(0,0,0,0.04)';
+            btn.addEventListener('mouseover', () => btn.style.background = '#009e8e');
+            btn.addEventListener('mouseout', () => btn.style.background = '#77A8BB');
+            btnContainer.appendChild(btn);
+        });
+        logoContainer.appendChild(btnContainer);
+        // Add top margin to body to prevent content overlap
+        document.body.style.marginTop = '90px';
+    }
+    const images = [
+        { src: 'working men.jpg', alt: 'Working Men' },
+        { src: 'ethiopia.jpg', alt: 'Ethiopia' },
+        { src: 'help.PNG', alt: 'Help' }
+    ];
+
+    const bottomContainer = document.createElement('div');
+    bottomContainer.style.display = 'flex';
+    bottomContainer.style.justifyContent = 'center';
+    bottomContainer.style.alignItems = 'center';
+    bottomContainer.style.gap = '40px';
+    bottomContainer.style.marginTop = '64px';
+    bottomContainer.style.marginBottom = '48px';
+
+    images.forEach(imgData => {
+        const img = document.createElement('img');
+        img.src = imgData.src;
+        img.alt = imgData.alt;
+        // Set all images to the same height
+        img.style.height = '400px';
+        img.style.width = 'auto';
+        img.style.borderRadius = '14px';
+        img.style.boxShadow = '0 4px 16px rgba(0,0,0,0.10)';
+        img.style.objectFit = 'cover';
+        img.style.background = '#fff';
+        // Adjust order to center help.PNG
+        if (imgData.src.toLowerCase() === 'help.png' || imgData.src.toLowerCase() === 'help.PNG') {
+            img.style.order = '2'; // Place in the center
+        } else {
+            img.style.order = imgData.src.toLowerCase() === 'working men.jpg' ? '1' : '3';
+        }
+        bottomContainer.appendChild(img);
+    });
+
+    document.body.appendChild(bottomContainer);
+</script>
+<script>
+// Center the white bar at the top by updating its styles
+document.addEventListener('DOMContentLoaded', function() {
+    const logoContainer = document.querySelector('.image-container[style*="position: absolute"]');
+    if (logoContainer) {
+        logoContainer.style.left = '50%';
+        logoContainer.style.transform = 'translateX(-50%)';
+        logoContainer.style.width = '900px';
+        logoContainer.style.right = '';
+    }
+});
+</script>
